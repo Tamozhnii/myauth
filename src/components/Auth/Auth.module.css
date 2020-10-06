@@ -1,0 +1,45 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 5px 5px 30px black;
+  justify-content: center;
+  border-radius: 5px;
+}
+.el {
+  margin: 0 auto 30px auto;
+}
+.email {
+  margin: 10px auto 40px auto;
+  height: 30px;
+  text-align: center;
+  border-radius: 5px;
+}
+.password {
+  margin: 10px auto 40px auto;
+  height: 30px;
+  text-align: center;
+  border-radius: 5px;
+}
+.btn {
+  margin: 60px auto 0 auto;
+  height: 20px;
+}
+.prompt {
+  position: absolute;
+  color: darkgray;
+  font-size: 12px;
+  width: 90%;
+  text-align: center;
+}
+.prompt_email {
+  transform: translate(5%, -100%);
+}
+.prompt_password {
+  transform: translate(5%, 110%);
+}
