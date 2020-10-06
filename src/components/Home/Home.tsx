@@ -3,14 +3,13 @@ import logo from "./../../assets/img/logo.svg";
 // Использовал модульные стили, т.к. не понимаю как работать со стелевыми компонентами...
 // у которых нет Автозаполнения, подсказок, и непонятно как использовать псевдоклассы
 import style from "./Home.module.css";
-import { NavLink } from "react-router-dom";
 
-export default () => {
+export default (props: any) => {
   return (
     <div className={style.App}>
       <header className={style.App_header}>
         <div className={style.nav}>
-          <NavLink to="/login">LogOut</NavLink>
+          <button onClick={() => props.logOut()}>Выйти</button>
         </div>
         <img src={logo} className={style.App_logo} alt="logo" />
         <p>

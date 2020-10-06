@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "./components/Home/Home";
+import Home from "./components/Home/HomeContainer";
 import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
 import Auth from "./components/Auth/AuthContainer";
 

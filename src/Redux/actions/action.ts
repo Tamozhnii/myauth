@@ -37,3 +37,7 @@ export function setPassword(value: TPassword): IActionCreator<TPassword> {
 export function login(): IActionCreator<boolean> {
   return actionCreator(EActionTypes.LOGIN, true);
 }
+
+export function logOut(): IActionCreator<boolean> {
+  return actionCreator(EActionTypes.LOGOUT, false);
+}

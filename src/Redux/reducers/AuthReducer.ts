@@ -8,12 +8,15 @@ interface ISetPasswordAction
   extends IBaseActionCreator<EActionTypes.SET_PASSWORD, TPassword> {}
 interface ISetLoginAction
   extends IBaseActionCreator<EActionTypes.LOGIN, boolean> {}
+interface ISetLogOutAction
+  extends IBaseActionCreator<EActionTypes.LOGOUT, boolean> {}
 
 // Конечный тип для передаваемого экшена
 export type TAuthAction =
   | ISetEmailAction
   | ISetPasswordAction
-  | ISetLoginAction;
+  | ISetLoginAction
+  | ISetLogOutAction;
 
 // Интерфейс чтобы определить начальное состояние объекта относящийся к странице авторизации
 export interface IAuthState {
@@ -63,6 +66,11 @@ const authValid = (value: boolean): boolean => {
   return value;
 };
 
+const logOut = (): boolean => {
+  localStorage.setItem("authValid", "0");
+  return false;
+};
+
 export function authReducer(
   state = AuthState,
   action: TAuthAction
@@ -89,6 +97,11 @@ export function authReducer(
         isLogin: authValid(
           state.emailValide && state.passwordValide ? true : false
         ),
+      };
+    case EActionTypes.LOGOUT:
+      return {
+        ...state,
+        isLogin: logOut(),
       };
     default:
       return state;

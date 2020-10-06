@@ -3,6 +3,7 @@ export enum EActionTypes {
   SET_EMAIL = "setEmail",
   SET_PASSWORD = "setPassword",
   LOGIN = "login",
+  LOGOUT = "logOut",
 }
 
 // Кастомный тип для эшена поля ввода емаил. По аналогии с проектом, зачем нужно???
