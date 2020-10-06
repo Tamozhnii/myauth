@@ -3,6 +3,8 @@ import Home from "./components/Home/Home";
 import { HashRouter, Redirect, Route, Switch } from "react-router-dom";
 import Auth from "./components/Auth/AuthContainer";
 
+// данный роутинг не позволяет автоматически войти в приложения, после входа,
+//не разобрался как сделать условное обновление страницы или перерендер APP?
 function App() {
   return (
     <HashRouter>

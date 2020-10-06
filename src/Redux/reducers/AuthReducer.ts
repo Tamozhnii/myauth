@@ -17,8 +17,6 @@ export type TAuthAction =
 
 // Интерфейс чтобы определить начальное состояние объекта относящийся к странице авторизации
 export interface IAuthState {
-  // Изза того что указал payload необязательным атрибутом + указал кастомный тип,
-  //пришлось добавить 3 типа, как правильнее сделать ????
   emailValue: string | TEmail;
   emailValide: boolean;
   // Аналогично с payload
